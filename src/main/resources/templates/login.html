@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+    <head>
+        <title>视频策略管理系统</title>
+         <link type="text/css" rel="stylesheet" th:href="@{/css/login.css}"/>
+         <link type="text/css" rel="stylesheet" th:href="@{/css/global.css}"/>
+    </head>
+<body>
+    <div class="header">
+        <div class="header-h1"><h1>视频策略管理系统</h1></div>
+    </div>
+    <div class="main">
+        <div class="login">
+            <div class="container">
+                <div class="loginbox clearfix">
+                    <div class="login-img">
+                        <img src="images/logo.png" width="164" height="164" alt=""/>
+                    </div>
+                    <div class="login-box">
+                        <form th:action="@{/login}" method="post">
+                            <div class="form-group">
+                                <input class="form-control line-input" id="values" type="text" name="username" value=""  placeholder="用户名"/>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control line-input" id="password" name="password" type="password" value="" placeholder="登录密码"/>
+                                <span class="enter-psw" id="enter-psw" style="display:none;">登录密码</span>
+                            </div>
+                            <div class="form-group clearfix">
+                                <input class="submit btn-green" id="submit" type="submit" value="登 录"/>
+                                <div class="right-btn">
+                                    <a  href="#">忘记密码</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-main">
+
+        </div>
+    </div>
+</body>
+</html>  

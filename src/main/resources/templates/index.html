@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+ <!-- <head th:replace="layout/header::commhead"></head> -->
+  <head th:replace="layout/head::commhead"></head>
+<body data-type="index">
+	<script th:src="@{js/theme.js}"></script>
+	<div class="am-g tpl-g">
+		<!-- 头部 -->
+	<header th:replace="layout/header"></header>
+		<!-- 风格切换 -->
+		<div class="tpl-skiner">
+			<div class="tpl-skiner-toggle am-icon-cog"></div>
+			<div class="tpl-skiner-content">
+				<div class="tpl-skiner-content-title">选择主题</div>
+				<div class="tpl-skiner-content-bar">
+					<span class="skiner-color skiner-white" data-color="theme-white"></span>
+					<span class="skiner-color skiner-black" data-color="theme-black"></span>
+				</div>
+			</div>
+		</div>
+		<!-- 侧边导航栏 -->
+		<div th:replace="layout/left-sidebar"></div>
+
+
+		<!-- 内容区域 -->
+
+		 <div th:replace="layout/main"></div>
+	</div>
+	<div th:include="layout/footer :: button"></div>
+  
+</body>
+
+</html>
